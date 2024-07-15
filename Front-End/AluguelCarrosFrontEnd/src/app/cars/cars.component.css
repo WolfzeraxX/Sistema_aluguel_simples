@@ -1,0 +1,17 @@
+.mat-form-field {
+    display: block;
+    margin: 8px 0;
+  }
+  
+  .mat-elevation-z8 {
+    margin-top: 20px;
+  }
+  
+  mat-table {
+    width: 100%;
+  }
+  
+  mat-paginator {
+    margin-top: 20px;
+  }
+  

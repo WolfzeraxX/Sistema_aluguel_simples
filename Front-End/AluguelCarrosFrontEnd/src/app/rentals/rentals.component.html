@@ -1,0 +1,26 @@
+<div class="rental-container">
+  <h2>Cadastro de Aluguel</h2>
+  <form (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <mat-label>Carro</mat-label>
+      <mat-select [(ngModel)]="rental.carId" name="carId" required>
+        <mat-option *ngFor="let car of cars" [value]="car.id">{{ car.name }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Cliente</mat-label>
+      <mat-select [(ngModel)]="rental.customerId" name="customerId" required>
+        <mat-option *ngFor="let customer of customers" [value]="customer.id">{{ customer.name }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Valor da Diária</mat-label>
+      <input matInput [(ngModel)]="rental.dailyRate" name="dailyRate" required>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Dias Locados</mat-label>
+      <input matInput [(ngModel)]="rental.daysRented" name="daysRented" required>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Cadastrar</button>
+  </form>
+</div>
