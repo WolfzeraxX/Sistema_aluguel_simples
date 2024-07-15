@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\italo\\OneDrive\\Documentos\\Projetos\\Sistema_aluguel_simples\\Api_aluguel_carros\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6A6E2A05-2A35-4202-A71A-B92FC8BF95D4}|Api_aluguel_carros.csproj|c:\\users\\italo\\onedrive\\documentos\\projetos\\sistema_aluguel_simples\\api_aluguel_carros\\controllers\\locadorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A6E2A05-2A35-4202-A71A-B92FC8BF95D4}|Api_aluguel_carros.csproj|solutionrelative:controllers\\locadorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A6E2A05-2A35-4202-A71A-B92FC8BF95D4}|Api_aluguel_carros.csproj|c:\\users\\italo\\onedrive\\documentos\\projetos\\sistema_aluguel_simples\\api_aluguel_carros\\controllers\\carrocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A6E2A05-2A35-4202-A71A-B92FC8BF95D4}|Api_aluguel_carros.csproj|solutionrelative:controllers\\carrocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A6E2A05-2A35-4202-A71A-B92FC8BF95D4}|Api_aluguel_carros.csproj|c:\\users\\italo\\onedrive\\documentos\\projetos\\sistema_aluguel_simples\\api_aluguel_carros\\controllers\\aluguelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A6E2A05-2A35-4202-A71A-B92FC8BF95D4}|Api_aluguel_carros.csproj|solutionrelative:controllers\\aluguelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AluguelController.cs",
+              "DocumentMoniker": "C:\\Users\\italo\\OneDrive\\Documentos\\Projetos\\Sistema_aluguel_simples\\Api_aluguel_carros\\Controllers\\AluguelController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AluguelController.cs",
+              "ToolTip": "C:\\Users\\italo\\OneDrive\\Documentos\\Projetos\\Sistema_aluguel_simples\\Api_aluguel_carros\\Controllers\\AluguelController.cs",
+              "RelativeToolTip": "Controllers\\AluguelController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-15T21:36:05.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LocadorController.cs",
+              "DocumentMoniker": "C:\\Users\\italo\\OneDrive\\Documentos\\Projetos\\Sistema_aluguel_simples\\Api_aluguel_carros\\Controllers\\LocadorController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LocadorController.cs",
+              "ToolTip": "C:\\Users\\italo\\OneDrive\\Documentos\\Projetos\\Sistema_aluguel_simples\\Api_aluguel_carros\\Controllers\\LocadorController.cs",
+              "RelativeToolTip": "Controllers\\LocadorController.cs",
+              "ViewState": "AQIAAEMAAAAAAAAAAAAcwC8AAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-15T21:32:04.252Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CarroController.cs",
+              "DocumentMoniker": "C:\\Users\\italo\\OneDrive\\Documentos\\Projetos\\Sistema_aluguel_simples\\Api_aluguel_carros\\Controllers\\CarroController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CarroController.cs",
+              "ToolTip": "C:\\Users\\italo\\OneDrive\\Documentos\\Projetos\\Sistema_aluguel_simples\\Api_aluguel_carros\\Controllers\\CarroController.cs",
+              "RelativeToolTip": "Controllers\\CarroController.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAowFMAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-15T21:31:57.082Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
