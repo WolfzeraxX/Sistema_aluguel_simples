@@ -8,7 +8,7 @@
         public decimal DailyRate { get; set; }
         public int DaysRented { get; set; }
         public DateTime RentalDate { get; set; }
-        public Car Car { get; set; }
-        public Customer Customer { get; set; }
+        public Car? Car { get; set; }
+        public Customer? Customer { get; set; }
     }
 }

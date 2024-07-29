@@ -4527,11 +4527,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\italo\\OneDrive\\Documentos\\Projetos\\Sistema_aluguel_simples\\Api_aluguel_carros\\Api_aluguel_carros.csproj",
+      "projectUniqueName": "C:\\Users\\italo\\OneDrive\\Documentos\\Projetos\\sistema Aluguel\\Sistema_aluguel_simples\\Api_aluguel_carros\\Api_aluguel_carros.csproj",
       "projectName": "Api_aluguel_carros",
-      "projectPath": "C:\\Users\\italo\\OneDrive\\Documentos\\Projetos\\Sistema_aluguel_simples\\Api_aluguel_carros\\Api_aluguel_carros.csproj",
+      "projectPath": "C:\\Users\\italo\\OneDrive\\Documentos\\Projetos\\sistema Aluguel\\Sistema_aluguel_simples\\Api_aluguel_carros\\Api_aluguel_carros.csproj",
       "packagesPath": "C:\\Users\\italo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\italo\\OneDrive\\Documentos\\Projetos\\Sistema_aluguel_simples\\Api_aluguel_carros\\obj\\",
+      "outputPath": "C:\\Users\\italo\\OneDrive\\Documentos\\Projetos\\sistema Aluguel\\Sistema_aluguel_simples\\Api_aluguel_carros\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\italo\\AppData\\Roaming\\NuGet\\NuGet.Config",

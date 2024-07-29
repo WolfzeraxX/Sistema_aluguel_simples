@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+    <span>Car Rental</span>
+  </mat-toolbar>
+  
+  <div class="container">
+    <h1>Rental Details</h1>
+    <div *ngIf="rental">
+      <p><strong>Car ID:</strong> {{ rental.carId }}</p>
+      <p><strong>Customer ID:</strong> {{ rental.customerId }}</p>
+      <p><strong>Start Date:</strong> {{ rental.dailyRate | number }}</p>
+      <p><strong>End Date:</strong> {{ rental.daysRented | number }}</p>
+    </div>
+    <button mat-button routerLink="/rentals">Back to List</button>
+  </div>
+  

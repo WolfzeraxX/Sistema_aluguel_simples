@@ -15,6 +15,9 @@ export class CarService {
   getCars(): Observable<Car[]> {
     return this.http.get<Car[]>(this.apiUrl);
   }
+  getCar(id: number): Observable<any> {
+    return this.http.get(`${this.apiUrl}/${id}`);
+  }
 
   addCar(car: Car): Observable<Car> {
     return this.http.post<Car>(this.apiUrl, car);
