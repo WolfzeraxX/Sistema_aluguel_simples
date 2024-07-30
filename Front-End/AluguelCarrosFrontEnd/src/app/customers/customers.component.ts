@@ -30,10 +30,10 @@ export class CustomerComponent {
               public dialog: MatDialog) { }
 
   ngOnInit() {
-    this.loadCars();
+    this.loadCustomer();
   }
 
-  loadCars() {
+  loadCustomer() {
     this.customerService.getCustomers().subscribe((data: Customer[]) => {
       this.customers = data;
       this.dataSource = new MatTableDataSource(this.customers);
@@ -44,8 +44,9 @@ export class CustomerComponent {
 
   onSubmit() {
     this.customerService.addCustomer(this.customer).subscribe(response => {
-      alert('Carro cadastrado com sucesso!');
-      this.loadCars();  // Recarrega a lista de carros após adicionar um novo
+      alert('Cliente Cadastrado com sucesso');
+      this.loadCustomer(); 
+      window.location.reload(); 
     });
   }
 
@@ -58,7 +59,7 @@ export class CustomerComponent {
     }
   }
 
-  editiCostumer(customer: Customer) {
+  editCustomer(customer: Customer) {
     const dialogRef = this.dialog.open(CustomerDialogComponent, {
       width: '250px',
       data: customer
@@ -67,15 +68,15 @@ export class CustomerComponent {
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
         this.customerService.updateCustomer(result).subscribe(() => {
-          this.loadCars();
+          this.loadCustomer();
         });
       }
     });
   }
 
-  deleteCostumer(id: number) {
+  deleteCustomer(id: number) {
     this.customerService.deleteCustomer(id).subscribe(() => {
-      this.loadCars();
+      this.loadCustomer();
     });
   }
 }

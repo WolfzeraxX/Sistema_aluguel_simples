@@ -1,40 +1,42 @@
 <div class="rental-form-container">
-    <h2>Criar Aluguel</h2>
-    <form (ngSubmit)="createRental()">
-      <mat-form-field appearance="outline" class="full-width">
-        <mat-label>Carro</mat-label>
-        <mat-select id="carId" [(ngModel)]="rental.carId" name="carId" required>
-          <mat-option *ngFor="let car of cars" [value]="car.id">
-            {{ car.name }} {{ car.model }} - {{ car.year }}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-  
-      <mat-form-field appearance="outline" class="full-width">
-        <mat-label>Cliente</mat-label>
-        <mat-select id="customerId" [(ngModel)]="rental.customerId" name="customerId" required>
-          <mat-option *ngFor="let customer of customers" [value]="customer.id">
-            {{ customer.name }} - {{ customer.document }} - {{ customer.phoneNumber }} - {{ customer.address }}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-  
-      <mat-form-field appearance="outline" class="full-width">
-        <mat-label>Valor do Aluguel (dias)</mat-label>
-        <input matInput type="number" id="dailyRate" [(ngModel)]="rental.dailyRate" name="dailyRate">
-      </mat-form-field>
-  
-      <mat-form-field appearance="outline" class="full-width">
-        <mat-label>Dias Locados</mat-label>
-        <input matInput type="number" id="daysRented" [(ngModel)]="rental.daysRented" name="daysRented">
-      </mat-form-field>
+  <h2>Cadastrar Aluguel</h2>
+  <form (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Carro</mat-label>
+      <mat-select [(ngModel)]="rental.carId" name="carId" required>
+        <mat-option *ngFor="let car of cars" [value]="car.id">
+          {{ car.name }} {{ car.model }} - {{ car.year }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
 
-      <mat-form-field appearance="outline" class="full-width">
-        <mat-label>Data Inicio</mat-label>
-        <input matInput type="date" [(ngModel)]="rental.rentalDate" name="rentalDate">
-      </mat-form-field>
-  
-      <button mat-raised-button color="primary" type="submit">Criar Aluguel</button>
-    </form>
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Cliente</mat-label>
+      <mat-select [(ngModel)]="rental.customerId" name="customerId" required>
+        <mat-option *ngFor="let customer of customers" [value]="customer.id">
+          {{ customer.name }} - {{ customer.document }} - {{ customer.phoneNumber }} - {{ customer.address }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Valor Diário</mat-label>
+      <input matInput [(ngModel)]="rental.dailyRate" name="dailyRate" type="number" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Dias Locados</mat-label>
+      <input matInput [(ngModel)]="rental.daysRented" name="daysRented" type="number" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Data do Aluguel</mat-label>
+      <input matInput [(ngModel)]="rental.rentalDate" name="rentalDate" type="date" required>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Cadastrar Aluguel</button>
+  </form>
+  <br>
+    <a routerLink="/"><button mat-raised-button color="primary">Voltar</button></a>
   </div>
   

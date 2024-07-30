@@ -19,8 +19,8 @@ export class RentalService {
     return this.http.get<Rental>(`${this.apiUrl}/${id}`);
   }
 
-  createRental(rental: Rental): Observable<Rental> {
-    return this.http.post<Rental>(this.apiUrl, rental);
+  createRental(rental: Rental): Observable<any> {
+    return this.http.post<any>(this.apiUrl, rental);
   }
 
   updateRental(id: number, rental: Rental): Observable<Rental> {

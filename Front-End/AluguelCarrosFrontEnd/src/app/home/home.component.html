@@ -1,11 +1,19 @@
 <div class="container">
-    <h1>Bem-vindo ao Sistema de Gerenciamento de Aluguel de Carros</h1>
-    <nav>
-      <ul>
-        <li><a routerLink="/cars">Cadastro de Carros</a></li>
-        <li><a routerLink="/customers">Cadastro de Clientes / Aluguel</a></li>
-        <li><a routerLink="/rentals">Relatório de Aluguéis</a></li>
-      </ul>
-    </nav>
+  <mat-toolbar color="primary">
+    <span>Bem-vindo ao Sistema de Gerenciamento de Aluguel de Carros</span>
+  </mat-toolbar>
+
+  <nav>
+    <ul>
+      <li><a mat-button routerLink="/cars">Cadastro de Carros</a></li>
+      <li><a mat-button routerLink="/customers">Cadastro de Clientes</a></li>
+      <li><a mat-button routerLink="/create-rental">Cadastrar Aluguel</a></li>
+      <li><a mat-button routerLink="/rentals">Relatório de Aluguéis</a></li>
+    </ul>
+  </nav>
+
+  <div class="image-container">
+    <img src="assets/Carropng.png" alt="Car Image">
   </div>
-  
+
+</div>

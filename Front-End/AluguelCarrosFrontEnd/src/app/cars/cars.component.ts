@@ -16,6 +16,7 @@ import { MatDialog } from '@angular/material/dialog';
 export class CarComponent implements OnInit {
   car: Car = { id: 0, name: '', model: '', year: 0 };
   cars: Car[] = [];
+  carModels = ['Basico', 'Completo', 'Suv', 'Luxo'];
   displayedColumns: string[] = ['id', 'name', 'model', 'year', 'actions'];
   dataSource!: MatTableDataSource<Car>;
 

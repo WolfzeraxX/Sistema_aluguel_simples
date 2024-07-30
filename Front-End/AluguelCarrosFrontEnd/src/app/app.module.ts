@@ -27,9 +27,9 @@ import { RentalListComponent } from './rentals/components/rental-list/rental-lis
 import { RentalDetailComponent } from './rentals/components/rental-detail/rental-detail.component';
 import { RentalCreateComponent } from './rentals/components/rental-create/rental-create.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import {MatIconModule} from '@angular/material/icon';
-import {MatToolbarModule} from '@angular/material/toolbar'; 
-import {MatListModule} from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar'; 
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [

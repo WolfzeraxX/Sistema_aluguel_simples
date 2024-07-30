@@ -20,7 +20,7 @@ export class RentalCreateComponent {
     customerId: 0,
     dailyRate: 0,
     daysRented: 0,
-    rentalDate: new Date()
+    rentalDate: ''
   };
   car: Car | null = null;
   customer: Customer | null = null;
@@ -60,16 +60,29 @@ export class RentalCreateComponent {
     }
   }
 
-  createRental(): void {
-    console.log(this.rental); // Verifique se os dados estão corretos
+  
+  onSubmit() {
+    // Certifique-se de que rentalDate está no formato correto
+    this.rental.rentalDate = new Date(this.rental.rentalDate).toISOString();
+
     this.rentalService.createRental(this.rental).subscribe(
-      () => {
-        this.router.navigate(['/rentals']);
+      response => {
+        alert('Aluguel cadastrado com sucesso');
+        this.resetForm();  // Limpa o formulário após o sucesso
       },
       error => {
-        console.error('Error:', error); // Mostre o erro para depuração
+        console.error('Erro ao cadastrar aluguel', error);
       }
     );
+  }
+  resetForm() {
+    this.rental = {
+      carId: 0,
+      customerId: 0,
+      dailyRate: 0,
+      daysRented: 0,
+      rentalDate: ''
+    };
   }
   }
 

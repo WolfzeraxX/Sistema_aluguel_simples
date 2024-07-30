@@ -25,12 +25,30 @@ namespace CarRentalAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<Customer>> PostCustomer(Customer customer)
         {
-            _context.Customers.Add(customer);
-            await _context.SaveChangesAsync();
-            return CreatedAtAction("GetCustomer", new { id = customer.Id }, customer);
+            if (customer == null)
+            {
+                return BadRequest("Customer data is null.");
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {
+                _context.Customers.Add(customer);
+                await _context.SaveChangesAsync();
+                return CreatedAtAction("GetCustomerId", new { id = customer.Id }, customer);
+            }
+            catch (Exception ex)
+            {
+                // Log the exception (ex) here for debugging
+                return StatusCode(500, "Internal server error. Please try again later.");
+            }
         }
 
-       
+
 
         [HttpGet("{id}")]
         public async Task<ActionResult<Customer>> GetCustomerId(int id)

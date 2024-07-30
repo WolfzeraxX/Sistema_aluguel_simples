@@ -1,45 +1,50 @@
-<div class="customer-container">
+<div class="container">
+  <mat-toolbar color="primary">
+    <span>Cadastro de Cliente</span>
+  </mat-toolbar>
+
+  <div class="customer-form">
     <h2>Cadastro de Cliente</h2>
     <form (ngSubmit)="onSubmit()">
-      <mat-form-field>
-        <mat-label>Nome</mat-label>
+      <mat-form-field appearance="outline" class="full-width">
+        <label>Nome</label>
         <input matInput [(ngModel)]="customer.name" name="name" required>
       </mat-form-field>
-      <mat-form-field>
-        <mat-label>Telefone</mat-label>
+      <mat-form-field appearance="outline" class="full-width">
+        <label>Telefone</label>
         <input matInput [(ngModel)]="customer.phoneNumber" name="phoneNumber" required>
       </mat-form-field>
-      <mat-form-field>
-        <mat-label>Endereço</mat-label>
+      <mat-form-field appearance="outline" class="full-width">
+        <label>Endereço</label>
         <input matInput [(ngModel)]="customer.address" name="address" required>
       </mat-form-field>
-      <mat-form-field>
-        <mat-label>Documento</mat-label>
+      <mat-form-field appearance="outline" class="full-width">
+        <label>Documento</label>
         <input matInput [(ngModel)]="customer.document" name="document" required>
       </mat-form-field>
       <button mat-raised-button color="primary" type="submit">Cadastrar</button>
     </form>
   </div>
 
-  <h2>Lista de Clientes</h2>
+  <div class="customer-list">
+    <h2>Lista de Clientes</h2>
     <div class="mat-elevation-z8">
       <mat-table [dataSource]="dataSource" matSort>
-  
         <ng-container matColumnDef="id">
           <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
           <mat-cell *matCellDef="let customer"> {{customer.id}} </mat-cell>
         </ng-container>
-  
+
         <ng-container matColumnDef="name">
           <mat-header-cell *matHeaderCellDef mat-sort-header> Nome </mat-header-cell>
           <mat-cell *matCellDef="let customer"> {{customer.name}} </mat-cell>
         </ng-container>
-  
+
         <ng-container matColumnDef="telefone">
-          <mat-header-cell *matHeaderCellDef mat-sort-header> Numero de Telefone </mat-header-cell>
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Número de Telefone </mat-header-cell>
           <mat-cell *matCellDef="let customer"> {{customer.phoneNumber}} </mat-cell>
         </ng-container>
-  
+
         <ng-container matColumnDef="endereco">
           <mat-header-cell *matHeaderCellDef mat-sort-header> Endereço </mat-header-cell>
           <mat-cell *matCellDef="let customer"> {{customer.address}} </mat-cell>
@@ -49,22 +54,22 @@
           <mat-header-cell *matHeaderCellDef mat-sort-header> Documento </mat-header-cell>
           <mat-cell *matCellDef="let customer"> {{customer.document}} </mat-cell>
         </ng-container>
-  
+
         <ng-container matColumnDef="actions">
           <mat-header-cell *matHeaderCellDef> Ações </mat-header-cell>
           <mat-cell *matCellDef="let customer">
-            <button mat-flat-button color="primary" (click)="editiCostumer(customer)">Editar</button>
-            <button mat-flat-button color="warn"(click)="deleteCostumer(customer.id)">Deletar</button>
+            <button mat-flat-button color="primary" (click)="editCustomer(customer)">Editar</button>
+            <button mat-flat-button color="warn" (click)="deleteCustomer(customer.id)">Deletar</button>
           </mat-cell>
         </ng-container>
-  
+
         <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
         <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
       </mat-table>
-  
+
       <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
     </div>
-    <br>
-    
-    <a routerLink="/"><button mat-raised-button color="primary" type="submit">Voltar</button> </a>
-  
+  </div>
+  <br>
+  <a routerLink="/"><button mat-raised-button color="primary">Voltar</button></a>
+</div>

@@ -1,64 +1,66 @@
-<div>
-    <h2>Cadastro de Carros</h2>
-    <form (ngSubmit)="onSubmit()">
-      <mat-form-field>
-        <mat-label>Nome</mat-label>
-        <input matInput [(ngModel)]="car.name" name="name" required>
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label>Modelo</mat-label>
-        <input matInput [(ngModel)]="car.model" name="model" required>
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label>Ano</mat-label>
-        <input matInput [(ngModel)]="car.year" name="year" required>
-      </mat-form-field>
-      <button mat-raised-button color="primary" type="submit">Cadastrar</button>
-      
-    </form>
- 
-  
-    <h2>Lista de Carros</h2>
-    <div class="mat-elevation-z8">
-      <mat-table [dataSource]="dataSource" matSort>
-  
-        <ng-container matColumnDef="id">
-          <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
-          <mat-cell *matCellDef="let car"> {{car.id}} </mat-cell>
-        </ng-container>
-  
-        <ng-container matColumnDef="name">
-          <mat-header-cell *matHeaderCellDef mat-sort-header> Nome </mat-header-cell>
-          <mat-cell *matCellDef="let car"> {{car.name}} </mat-cell>
-        </ng-container>
-  
-        <ng-container matColumnDef="model">
-          <mat-header-cell *matHeaderCellDef mat-sort-header> Modelo </mat-header-cell>
-          <mat-cell *matCellDef="let car"> {{car.model}} </mat-cell>
-        </ng-container>
-  
-        <ng-container matColumnDef="year">
-          <mat-header-cell *matHeaderCellDef mat-sort-header> Ano </mat-header-cell>
-          <mat-cell *matCellDef="let car"> {{car.year}} </mat-cell>
-        </ng-container>
-  
-        <ng-container matColumnDef="actions">
-          <mat-header-cell *matHeaderCellDef> Ações </mat-header-cell>
-          <mat-cell *matCellDef="let car">
-            <button mat-flat-button color="primary" (click)="editCar(car)">Editar</button>
-            <button mat-flat-button color="warn"(click)="deleteCar(car.id)">Deletar</button>
-          </mat-cell>
-        </ng-container>
-  
-        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-      </mat-table>
-  
-      <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
-    </div>
+<div class="container">
+  <h2>Cadastro de Carros</h2>
+  <form (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Nome</mat-label>
+      <input matInput [(ngModel)]="car.name" name="name" required>
+    </mat-form-field>
 
-       <br>
-    
-     <a routerLink="/"><button mat-raised-button color="primary" type="submit">Voltar</button> </a>
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Modelo</mat-label>
+      <mat-select [(ngModel)]="car.model" name="model" required>
+        <mat-option *ngFor="let model of carModels" [value]="model">{{ model }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Ano</mat-label>
+      <input matInput [(ngModel)]="car.year" name="year" required>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Cadastrar</button>
+  </form>
+<br>
+  <h2>Lista de Carros</h2>
+  <div class="mat-elevation-z8">
+    <mat-table [dataSource]="dataSource" matSort>
+
+      <ng-container matColumnDef="id">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
+        <mat-cell *matCellDef="let car"> {{car.id}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Nome </mat-header-cell>
+        <mat-cell *matCellDef="let car"> {{car.name}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="model">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Modelo </mat-header-cell>
+        <mat-cell *matCellDef="let car"> {{car.model}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="year">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Ano </mat-header-cell>
+        <mat-cell *matCellDef="let car"> {{car.year}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="actions">
+        <mat-header-cell *matHeaderCellDef> Ações </mat-header-cell>
+        <mat-cell *matCellDef="let car">
+          <button mat-flat-button color="primary" (click)="editCar(car)">Editar</button>
+          <button mat-flat-button color="warn"(click)="deleteCar(car.id)">Deletar</button>
+        </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
   </div>
+
+  <br>
   
+  <a routerLink="/"><button mat-raised-button color="primary">Voltar</button></a>
+</div>

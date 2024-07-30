@@ -1,17 +1,83 @@
-.mat-form-field {
-    display: block;
-    margin: 8px 0;
-  }
-  
-  .mat-elevation-z8 {
-    margin-top: 20px;
-  }
-  
-  mat-table {
-    width: 100%;
-  }
-  
-  mat-paginator {
-    margin-top: 20px;
-  }
-  
+.container {
+  text-align: center;
+  margin: 20px;
+}
+
+mat-toolbar {
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.customer-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  background-color: #fdfdfd;
+}
+input{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.customer-form h2 {
+  margin-bottom: 20px;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.customer-list {
+  margin-top: 40px;
+}
+
+.customer-list h2 {
+  margin-bottom: 20px;
+}
+
+.mat-elevation-z8 {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+mat-table {
+  width: 100%;
+}
+
+mat-header-cell, mat-cell {
+  padding: 16px;
+}
+
+mat-header-row, mat-row {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  margin: 5px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a button {
+  margin-top: 20px;
+}
+
+/* Adicionando estilos para alterar a cor do texto */
+.mat-form-field-label, .mat-input-element, .mat-select-value-text {
+  color: black !important;
+}
+
+.mat-header-cell, .mat-cell {
+  color: black !important;
+}
+label {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #000;
+}
